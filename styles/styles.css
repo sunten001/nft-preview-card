@@ -4,16 +4,20 @@ body {
   font: 18px "Outfit", sans-serif;
 }
 
-.card,
-.card h2 {
+.card {
   /* border-radius: 0.5; */
   background-color: hsl(216, 50%, 16%);
   border: 3px solid red;
   width: 350px;
-  margin-left: 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.card #logo {
+.card #logo,
+.card h2,
+.card p,
+.card #ETH_timeLeft,
+hr {
   /* https://blog.hubspot.com/website/center-an-image-in-html */
   /* Method 2: Using the Margin Property
       Let’s say you have a very large image that you want to center. In that case, wrapping the image in a block element wouldn’t be the best option. Instead, you’d want to define the image with the CSS display property and set it to "block.” Here’s how to center an image using the margin property.
@@ -24,5 +28,46 @@ body {
   width: 90%;
   margin-left: auto;
   margin-right: auto;
+}
+
+.card #logo {
   border-radius: 10px;
+  border: 3px solid green;
+}
+
+.card h2 {
+  border: 3px solid cyan;
+}
+
+.card p {
+  color: hsl(215, 51%, 70%);
+  border: 3px solid lightgreen;
+}
+
+.card #ETH_timeLeft {
+  overflow: hidden;
+  /* border: 3px solid pink; */
+  margin-bottom: 1.5rem;
+}
+
+#ETH {
+  float: left;
+  color: hsl(178, 100%, 50%);
+  width: 45%;
+  margin-left: auto;
+  border: 3px solid yellow;
+}
+
+#timeLeft {
+  float: right;
+  width: 45%;
+  text-align: right;
+  color: hsl(215, 51%, 70%);
+  border: 3px solid purple;
+}
+
+hr {
+  background-color: hsl(215, 51%, 70%);
+  border: none;
+  height: 1px;
 }
