@@ -17,7 +17,8 @@ body {
 .card h2,
 .card p,
 .card #ETH_timeLeft,
-hr {
+hr,
+#footer {
   /* https://blog.hubspot.com/website/center-an-image-in-html */
   /* Method 2: Using the Margin Property
       Let’s say you have a very large image that you want to center. In that case, wrapping the image in a block element wouldn’t be the best option. Instead, you’d want to define the image with the CSS display property and set it to "block.” Here’s how to center an image using the margin property.
@@ -47,22 +48,43 @@ hr {
 .card #ETH_timeLeft {
   overflow: hidden;
   /* border: 3px solid pink; */
-  margin-bottom: 1.5rem;
 }
 
+.icon {
+  padding-right: 5%;
+}
 #ETH {
   float: left;
   color: hsl(178, 100%, 50%);
   width: 45%;
-  margin-left: auto;
+  /* force word wrap within div borders when string is too long */
+  /* does not work when using inline-flex to vertically align elements */
+  /* overflow-wrap: break-word; */
+
+  /* Vertically align text  */
+  /* Can vertically align text but if string is too long it overflows beyond div borders */
+  display: inline-flex;
+  align-items: center;
+  /* Did not vertically align text
+      display: inline-block;
+      vertical-align: middle; 
+      */
   border: 3px solid yellow;
 }
 
 #timeLeft {
   float: right;
+  color: hsl(215, 51%, 70%);
   width: 45%;
   text-align: right;
-  color: hsl(215, 51%, 70%);
+  /* force word wrap within div borders when string is too long */
+  /* does not work when using inline-flex to vertically align elements */
+  overflow-wrap: break-word;
+
+  /* Vertically align text  */
+  display: inline-flex;
+  align-items: center;
+
   border: 3px solid purple;
 }
 
@@ -70,4 +92,10 @@ hr {
   background-color: hsl(215, 51%, 70%);
   border: none;
   height: 1px;
+  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+#footer img {
+  height: 50px;
 }
